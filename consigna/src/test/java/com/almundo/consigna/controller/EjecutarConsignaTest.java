@@ -15,7 +15,8 @@ import static org.junit.Assert.fail;
  */
 public class EjecutarConsignaTest {
     
-    private final String[] ESCENARIO = {"4", "2", "1", "10"};
+    private final String[] ESCENARIO_UNO = {"4", "2", "1", "10"};
+    private final String[] ESCENARIO_DOS = {"7", "2", "1", "50"};
     
     public EjecutarConsignaTest() {
     }
@@ -48,10 +49,21 @@ public class EjecutarConsignaTest {
     public void testMain() {
         System.out.println("*************************************************************************************************************");
         System.out.println("************************************** TEST  EjecutarConsignaTest-main **************************************");
-        
-        System.out.println("Se ejecuta: EjecutarConsigna.main("+Arrays.toString(ESCENARIO)+")");
+        System.out.println("********************************************* ESCENARIO UNO *************************************************");
+        System.out.println("Se ejecuta: EjecutarConsigna.main("+Arrays.toString(ESCENARIO_UNO)+")");
         try {
-            EjecutarConsigna.main(ESCENARIO);
+            EjecutarConsigna.main(ESCENARIO_UNO);
+            System.out.println("TEST EXITOSO");
+            Assert.assertTrue(true);
+        } catch (Exception e) {
+            System.out.println("TEST FALLIDO");
+            fail("No se pudo completar la ejecución de los hilos - " + e.getMessage());
+        }
+        
+        System.out.println("********************************************* ESCENARIO DOS *************************************************");
+        System.out.println("Se ejecuta: EjecutarConsigna.main("+Arrays.toString(ESCENARIO_DOS)+")");
+        try {
+            EjecutarConsigna.main(ESCENARIO_DOS);
             System.out.println("TEST EXITOSO");
             Assert.assertTrue(true);
         } catch (Exception e) {
