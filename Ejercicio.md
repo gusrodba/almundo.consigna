@@ -19,3 +19,5 @@ Rta: EL codigo se encuentra documentado.
 
 # Nota:
 Se imprime un log en la consola con el movimiento de las llamadas.
+Se crearon clases test para 3 objetos.
+El principal es el test que ejecuta el main EjecutarConsignaTest.
